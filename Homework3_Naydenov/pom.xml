@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.ibs</groupId>
+    <artifactId>homework</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
+        <junit-platform-surefire-provider.version>1.1.0</junit-platform-surefire-provider.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <allure-junit5.version>2.12.0</allure-junit5.version>
+
+    </properties>
+
+    <dependencies>
+        <!--  https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.10.0</version>
+        </dependency>
+        <!--  https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api  -->
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>test</scope>
+        </dependency>
+        <!--  https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api  -->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit5</artifactId>
+            <version>${allure-junit5.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.12.0</version>
+                <configuration>
+                    <reportVersion>2.14.0</reportVersion>
+                    <resultsDirectory>/Users/dmitrijnajdenov/Documents/Homework3_Naydenov/allure-results</resultsDirectory>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
